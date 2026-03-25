@@ -1,0 +1,100 @@
+:root {
+  --bg-start: #f7b267;
+  --bg-mid: #f79d65;
+  --bg-end: #f4845f;
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --text-main: #1f2937;
+  --text-sub: #4b5563;
+  --accent: #0f766e;
+  --accent-hover: #0b5f58;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-main);
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-mid), var(--bg-end));
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 560px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.2);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.subtitle {
+  margin: 8px 0 20px;
+  color: var(--text-sub);
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+.file-label {
+  font-weight: 500;
+}
+
+input[type='file'] {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+.status {
+  min-height: 24px;
+  margin-top: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 20px;
+  }
+}
